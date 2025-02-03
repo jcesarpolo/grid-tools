@@ -19,12 +19,59 @@ Clone this repository to your local machine:
 ```bash
 git clone https://github.com/jcesarpolo/grid-tools.git
 ```
+or use the *"Download Zip"* button on Github.
 
 ### Install pyRevit
 If you have not already installed pyRevit, follow the [pyRevit installation guide](https://github.com/eirannejad/pyRevit) to get started.
 
-### Load the Extension into pyRevit
-Use the **Custom Extensions Directory** option in the pyRevit settings. When using this option, ensure you select the parent folder that contains the *.extension* folder.
+### Installing the Extension into pyRevit
+
+**Option 1: Using the pyRevit CLI**
+1. *Open PowerShell or Command Prompt*
+
+    Ensure pyRevit CLI is installed by running:
+    ```bash
+    pyrevit env
+    ```
+
+2. *Install the Extension*
+
+    Run the following command:
+    ```bash
+    pyrevit extend ui grid-tools "https://github.com/jcesarpolo/grid-tools.git" --dest "C:\pyRevit\Extensions"
+    ```
+
+3. *Reload pyRevit*
+
+    Apply changes by reloading pyRevit:
+    ```bash
+    pyrevit reload
+    ```
+
+4. *Verify Installation*
+
+    Check if the extension is installed:
+
+    ```bash
+    pyrevit extensions list
+    ```
+
+The Grid Tools extension should now be available in Revit.
+
+
+**Option 2: Adding the extension manually**
+
+1. Open pyRevit Settings*
+
+    Go to pyRevit settings and locate the Custom Extensions Directory option.
+
+2. *Select the Parent Folder*
+
+    When using this option, ensure you select the parent folder that contains the *.extension* folder.
+
+3. *Apply Changes*
+
+    Save the settings, pyRevit will reload automatically.
 
 For more details, check the *"Adding Extensions Manually"* section on the [documentation](https://pyrevitlabs.notion.site/Install-Extensions-0753ab78c0ce46149f962acc50892491).
 

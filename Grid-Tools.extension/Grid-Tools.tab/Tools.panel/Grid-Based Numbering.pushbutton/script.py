@@ -267,15 +267,7 @@ for (elem, dist) in elements_with_distance:
 
 t.Commit()
 
-# initial_sel_ids = set(initial_sel_ids)
-# if initial_sel_ids == modified_elem_ids:
 if (len(modified_elem_ids) ==  len(initial_sel_ids)):
     forms.alert("Selected elements were successfully numbered.")
 else:
     forms.alert("Not all elements were numbered.")
-# else:
-#     not_modified = initial_sel_ids - modified_elem_ids
-#     if not_modified == initial_sel_ids:
-#         forms.alert("No elements were numbered.", exitscript=True)
-#     else:
-#         forms.alert("Not all elements were numbered. Not numbered elements:" + str(len(not_modified)))
